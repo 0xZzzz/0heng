@@ -3,13 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <style>
+        .el-carousel__item h3 {
+            color: #475669;
+            font-size: 14px;
+            opacity: 0.75;
+            line-height: 150px;
+            margin: 0;
+        }
+
+        .el-carousel__item:nth-child(2n) {
+            background-color: #99a9bf;
+        }
+
+        .el-carousel__item:nth-child(2n+1) {
+            background-color: #d3dce6;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
     <el-container>
-        <el-header>Header</el-header>
-        <el-main>Main</el-main>
-        <el-footer>Footer</el-footer>
+        <el-header style="margin-bottom: 70px;">
+            <div style="height: 30px; width: 100%; background-color: navy; line-height: 30px; font-size: 14px">
+                <div style="float: right; margin-right: 20px; color: white">
+                    合作伙伴
+                </div>
+                <div style="float: right; margin-right: 20px; color: white">
+                    联系我们
+                </div>
+                <div style="float: right; margin-right: 20px; color: white">
+                    App下载
+                </div>
+                <div style="float: right; margin-right: 20px; color: white">
+                    <el-button style="height: 20px; line-height: 0;">登陆 / 注册</el-button>
+                </div>
+            </div>
+            <div>
+                <el-row>
+                    <el-col :span="8">
+                        <img th:src="@{/image/logo.png}"/>
+                    </el-col>
+                    <el-col :span="16" style="margin-top: 30px; padding-left: 7%">
+                        <ul style="list-style-type:none">
+                            <li class="nav-item">关于我们</li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item">新闻动态</li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item">消防商城</li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item">产品介绍</li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item">软件平台</li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item">解决方案</li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item">服务支持</li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item">体验中心</li>
+                        </ul>
+                    </el-col>
+                </el-row>
+            </div>
+        </el-header>
+        <el-main>
+            <template>
+                <div class="block">
+                    <el-carousel height="500px">
+                        <el-carousel-item>
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1521807214937&di=1860250387a85d026c87c8b475278a85&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01f7a15667e54a6ac7259f6e07f43c.jpg"/>
+                        </el-carousel-item>
+                        <el-carousel-item>
+                            2
+                        </el-carousel-item>
+                    </el-carousel>
+                </div>
+            </template>
+        </el-main>
+        <el-footer style="text-align: center">
+            <div style="color: grey; font-size: 10px;">Copyright©2018 www.0heng.com 版权所有</div>
+        </el-footer>
     </el-container>
 </div>
 </body>
