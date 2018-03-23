@@ -4,40 +4,23 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" th:href="@{/css/index.css}">
-    <style>
-        .el-carousel__item h3 {
-            color: #475669;
-            font-size: 14px;
-            opacity: 0.75;
-            line-height: 150px;
-            margin: 0;
-        }
-
-        .el-carousel__item:nth-child(2n) {
-            background-color: #99a9bf;
-        }
-
-        .el-carousel__item:nth-child(2n+1) {
-            background-color: #d3dce6;
-        }
-    </style>
 </head>
 <body>
 <div id="app">
     <el-container>
         <el-header style="margin-bottom: 70px;">
-            <div style="height: 30px; width: 100%; background-color: navy; line-height: 30px; font-size: 14px">
-                <div style="float: right; margin-right: 20px; color: white">
+            <div class="top-nav">
+                <div class="top-nav-item">
                     合作伙伴
                 </div>
-                <div style="float: right; margin-right: 20px; color: white">
+                <div class="top-nav-item">
                     联系我们
                 </div>
-                <div style="float: right; margin-right: 20px; color: white">
+                <div class="top-nav-item">
                     App下载
                 </div>
-                <div style="float: right; margin-right: 20px; color: white">
-                    <el-button style="height: 20px; line-height: 0;">登陆 / 注册</el-button>
+                <div class="top-nav-item">
+                    <el-button class="top-nav-btn">登陆 / 注册</el-button>
                 </div>
             </div>
             <div>
@@ -69,20 +52,29 @@
         </el-header>
         <el-main>
             <template>
-                <div class="block">
-                    <el-carousel height="500px">
+                <div class="block" style="width: 960px; margin: auto">
+                    <el-carousel height="630px">
                         <el-carousel-item>
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1521807214937&di=1860250387a85d026c87c8b475278a85&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01f7a15667e54a6ac7259f6e07f43c.jpg"/>
+                            <img th:src="@{/image/banner1.jpg}"/>
                         </el-carousel-item>
                         <el-carousel-item>
-                            2
+                            <img th:src="@{/image/banner2.jpg}"/>
+                        </el-carousel-item>
+                        <el-carousel-item>
+                            <img th:src="@{/image/banner3.jpg}"/>
+                        </el-carousel-item>
+                        <el-carousel-item>
+                            <img th:src="@{/image/banner4.jpg}"/>
+                        </el-carousel-item>
+                        <el-carousel-item>
+                            <img th:src="@{/image/banner5.jpg}"/>
                         </el-carousel-item>
                     </el-carousel>
                 </div>
             </template>
         </el-main>
         <el-footer style="text-align: center">
-            <div style="color: grey; font-size: 10px;">Copyright©2018 www.0heng.com 版权所有</div>
+            <div class="copyright">Copyright©2018 www.0heng.com 版权所有</div>
         </el-footer>
     </el-container>
 </div>

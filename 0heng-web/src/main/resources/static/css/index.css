@@ -2,3 +2,27 @@
     float: left;
     padding-left: 10px;
 }
+
+.top-nav {
+    height: 30px;
+    width: 100%;
+    background-color: navy;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.top-nav-item {
+    float: right;
+    margin-right: 20px;
+    color: white;
+}
+
+.top-nav-btn {
+    height: 20px;
+    line-height: 0;
+}
+
+.copyright {
+    color: grey;
+    font-size: 10px;
+}
